@@ -1,0 +1,50 @@
+{% load static %}
+
+{% block content %}
+{% include 'header.html' %}
+<style>
+    .dc{
+        background-color: rgb(206, 212, 200);
+    }
+</style>
+
+
+ <!-- Start Contact Us  -->
+ <div class="contact-box-main dc">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-sm-12">
+                <div class="contact-form-right">
+                    <h2>Prediction</h2>
+                    <form  method="post" action="fileupload" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <input type="file" class="form-control" id="name" name="image" placeholder="Your Name" required data-error="Please enter your name">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                           
+                            <div class="col-md-12">
+                                
+                                <div class="submit-button text-center">
+                                    <button class="btn hvr-hover" id="submit" type="submit">Test</button>
+                                    <div id="msgSubmit" class="h3 text-center hidden"></div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</div>
+<!-- End Cart -->
+<br><br>
+<br><br>
+<br><br>
+{% endblock  %}
+{% include 'footer.html' %}

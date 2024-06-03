@@ -1,0 +1,57 @@
+{% load static %}
+
+{% block content %}
+{% include 'header.html' %}
+
+<!-- 
+<div class="col-lg-4 col-md-12 col-sm-12">
+    <div class="footer-top-box">
+        <h3>Login</h3>
+        <form class="newsletter-box" method="post" action="addlogin">
+            {% csrf_token %}
+         
+            <div class="form-group">
+                <input class="" type="email" name="email" placeholder="Email Address*"  />
+                
+            </div>
+            <div class="form-group">
+                <input class="" type="password" name="password" placeholder="Password"  />
+               
+            </div>
+            <button class="btn hvr-hover" type="submit">Submit</button>
+        </form>
+    </div>
+</div> -->
+
+
+
+<div class="contact-box-main dc">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-sm-12">
+                <div class="contact-form-right">
+                    <h2>Login</h2>
+                    <form class="newsletter-box" method="post" action="addlogin">
+                        {% csrf_token %}
+                     
+                        <div class="form-group">
+                            <input class="" type="email" name="email" placeholder="Email Address*"  />
+                            
+                        </div>
+                        <div class="form-group">
+                            <input class="" type="password" name="password" placeholder="Password"  />
+                           
+                        </div>
+                        <button class="btn hvr-hover" type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</div>
+
+<br><br>
+<br><br>
+{% endblock  %}
+{% include 'footer.html' %}
